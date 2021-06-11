@@ -1,0 +1,55 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Survey.com</title>
+      <link rel="stylesheet" href="index.css">
+   </head>
+   <body onload="hidefield()">
+      <header class="">
+         <h1>Registration</h1>
+         <div class="">
+            <form class="survey-form">
+               <ul>
+                  <li class="box">
+                     <input class="name" type="text" name="Name" placeholder="Name">
+                  </li>
+                  <li class="box">
+                     <input type="text" class="last-name" name="last-name" placeholder="Surname" >
+                  </li>
+                  <li class="box" >
+                     <input  type="text" id="Email" class="email" name="text1" placeholder="Email or Phone Number" required>    
+                  </li>
+                  <li class="box">        
+                     <input type="date" class="date" name="date" placeholder="BirthDate" >
+                  </li>
+                  <li class="box">
+                     <select name="" id="" onchange="showfield(this.options[this.selectedIndex].value)">
+                        <option  selected>Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                     </select>
+                     <div id="div1">
+                        <div class="text">Other:</div>
+                        <input class="other" type="text" name="" placeholder="Type the Gender">
+                     </div>
+                  </li>
+                  <li class="box">  
+                     <input class="test" id="pass1" type="password" minlength="6" placeholder="Password" onkeyup='check();' required>
+                  </li>
+                  <li class="box">  
+                     <span id="message"></span>
+                     <input class="test" id="pass2" type="password" placeholder="Repeat Password" onkeyup='check();' required>
+                  </li>
+                  <div class="submit">
+                     <button type="submit">Sign up</button>
+                  </div>
+               </ul>
+            </form>
+         </div>
+      </header>
+   </body>
+   <script src="./app.js"></script>
+</html>
